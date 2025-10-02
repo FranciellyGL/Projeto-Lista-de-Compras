@@ -37,13 +37,13 @@ function editar(index) {
     let produto = produtos[index];
 
     let novoNome = prompt("Digite o novo nome do produto:", produto.nome);
-    if (novoNome === null || novoNome.trim() === "") return;  // cancela edição se vazio
+    if (novoNome === null || novoNome.trim() === "") return; 
 
     let novaQuantidade = prompt("Digite a nova quantidade do produto:", produto.quantidade);
     if (novaQuantidade === null || isNaN(parseInt(novaQuantidade))) return; 
 
     let novoPreco = prompt("Digite o novo preço do produto:", produto.preco);
-    if (novoPreco === null || isNaN(parseFloat(novoPreco))) return;  // cancela se não for número válido
+    if (novoPreco === null || isNaN(parseFloat(novoPreco))) return; 
 
     let novaCategoria = prompt("Digite a nova categoria do produto:", produto.categoria);
     if (novaCategoria === null || novaCategoria.trim() === "") return;
@@ -59,7 +59,7 @@ function editar(index) {
 
 
     produto.nome = novoNome.trim();
-    produto.quantidade = parseInt(novaQuantidade).trim();
+    produto.quantidade = parseInt(novaQuantidade);
     produto.preco = parseFloat(novoPreco).toFixed(2);
     produto.categoria = novaCategoria.trim();
     produto.origem = novaOrigem.trim();
