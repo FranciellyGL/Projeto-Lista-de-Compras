@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+     <h1 class="text-center text-2xl font-bold text-blue-900 my-5">Lista de Produtos</h1>
+    
+    <nav class="voltarLista bg-gray-200 p-3 mx-5 rounded flex justify-around">
+        <a href="cadastro.html" class="text-blue-900 font-medium">Cadastrar Novo Produto</a> 
+        <a href="index.html" class="text-blue-900 font-medium">Menu Principal</a>
+    </nav>
+
+    <table id="tabela-produtos" class="w-[90%] mx-auto my-6 border-collapse bg-white shadow">
+        <thead>
+            <tr class="bg-blue-900 text-white">
+                <th class="p-2 border">Nome</th>
+                <th class="p-2 border">Quantidade</th>
+                <th class="p-2 border">Preço</th>
+                <th class="p-2 border">Categoria</th>
+                <th class="p-2 border">Origem</th>
+                <th class="p-2 border">lote</th>
+                <th class="p-2 border">Validade</th>
+                <th class="p-2 border">Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaProdutos">
+            </tbody>
+    </table>
+
+    <form id="formEdicao" class="hidden bg-white p-6 rounded shadow w-80 mx-auto mt-6 space-y-3">
+  
+  <label class="block font-semibold">Nome:</label>
+  <input type="text" id="nome" required /><br/>
+
+  <label class="block font-semibold">Quantidade do Item:</label>
+  <input type="number" id="quantidade"  min="1"  required><br/>
+
+  <label class="block font-semibold">Preço:</label>
+  <input type="number" id="preco" step="0.01" required /><br/>
+  
+  <label class="block font-semibold">Categoria:</label>
+  <input type="text" id="categoria" required /><br/>
+  
+  <label class="block font-semibold">Origem:</label>
+  <input type="text" id="origem" required /><br/>
+  
+  <label class="block font-semibold">Lote:</label>
+  <input type="text" id="lote" required /><br/>
+  
+  <label class="block font-semibold">Validade:</label>
+  <input type="date" id="validade" required /><br/><br/>
+
+    <script src="../js/lista.js"></script> 
+</body>
+</html>
