@@ -7,13 +7,13 @@ function pegarProdutos(){
     produtos.forEach((produto, index) => {
         tabela.innerHTML += `
         <tr>
-            <td>${produto.nome}</td>
-            <td>${parseInt(produto.quantidade)}</td>
-            <td>R$ ${parseFloat(produto.preco).toFixed(2)}</td>
-            <td>${produto.categoria}</td>
-            <td>${produto.origem}</td>
-            <td>${produto.lote}</td>
-            <td>${produto.validade}</td>
+            <td class="text-center">${produto.nome}</td>
+            <td class="text-center">${parseInt(produto.quantidade)}</td>
+            <td class="text-center">R$ ${parseFloat(produto.preco).toFixed(2)}</td>
+            <td class="text-center">${produto.categoria}</td>
+            <td class="text-center">${produto.origem}</td>
+            <td class="text-center">${produto.lote}</td>
+            <td class="text-center">${produto.validade}</td>
             <td>
                 <button class=" p-1 m-1 bg-green-500 text-white font-bold rounded hover:bg-green-600" onclick="editar(${index})">Editar</button>
                 <button class=" p-1 m-1 bg-green-500 text-white font-bold rounded hover:bg-green-600" onclick="excluir(${index})">Excluir</button>
