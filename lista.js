@@ -15,8 +15,8 @@ function pegarProdutos(){
             <td>${produto.lote}</td>
             <td>${produto.validade}</td>
             <td>
-                <button onclick="editar(${index})">Editar</button>
-                <button onclick="excluir(${index})">Excluir</button>
+                <button class=" p-1 m-1 bg-green-500 text-white font-bold rounded hover:bg-green-600" onclick="editar(${index})">Editar</button>
+                <button class=" p-1 m-1 bg-green-500 text-white font-bold rounded hover:bg-green-600" onclick="excluir(${index})">Excluir</button>
             </td>
         </tr>
         `  
